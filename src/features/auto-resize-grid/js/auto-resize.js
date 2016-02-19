@@ -45,7 +45,7 @@
               $scope.$apply(function () {
                 uiGridCtrl.grid.refresh()
                   .then(function () {
-                    getDimensions();
+                    $timeout(getDimensions,0);
 
                     startTimeout();
                   });
